@@ -1,0 +1,39 @@
+.v-v {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.bt-addCar {
+    text-align: center;
+    width: 80%;
+    height: 36px;
+    font-size: 13px;
+    margin-top: 46px;
+    background: #6cf;
+    color: #fff;
+}
+
+.t-carInfo {
+    font-size: 48rpx;
+    color: #4b4d59;
+    margin-top: 45px;
+    margin-bottom: 25px;
+}
+
+.t-desc {
+    font-size: 30rpx;
+    color: #333333;
+    margin-bottom: 8px;
+}
+
+.v-car {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-car {
+    width: 389rpx;
+    height: 317rpx;
+}

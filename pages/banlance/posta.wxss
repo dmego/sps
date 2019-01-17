@@ -1,0 +1,56 @@
+.parent {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #f4f4f4;
+}
+
+.v-vertical {
+    display: flex;
+    flex-direction: column;
+    background: white;
+}
+
+.v-h {
+    display: flex;
+    flex-direction: row;
+    background: white;
+    align-items: baseline;
+    padding-left: 15px;
+}
+
+.v-h input {
+    height: 90px;
+    color: black;
+    font-size: 90rpx;
+}
+
+.v-h text {
+    color: black;
+    font-size: 60rpx;
+}
+
+.t-desc {
+    color: #999;
+    font-size: 30rpx;
+    padding: 15px;
+}
+
+.bt {
+    margin-top: 25px;
+}
+
+.v-h-bt {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    background: white;
+    justify-content: space-between;
+    padding-right: 15px;
+}
+
+.btn-posta {
+    color: #388ef3;
+    font-size: 30rpx;
+}

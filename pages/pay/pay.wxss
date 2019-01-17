@@ -1,0 +1,87 @@
+page {
+  background: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.price {
+  margin-top: 100rpx;
+  width: 550rpx;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1rpx solid #ccc;
+}
+
+.price-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 28rpx;
+  color: #aaa;
+}
+
+.coupon-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 28rpx;
+  color: orange;
+  margin: 10rpx 0 40rpx 0;
+}
+
+.pay-ways {
+  width: 550rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+
+.pay-ways .pay-icon {
+  width: 30rpx;
+  height: 30rpx;
+  padding-right: 20rpx;
+}
+
+.pay-ways .pay-text {
+  background-repeat: no-repeat;
+  background-size: 30rpx;
+  background-position-y: 8rpx;
+  font-size: 28rpx;
+  padding-left: 45rpx;
+  color: #aaa;
+  margin: 40rpx 0;
+}
+
+.charge {
+  text-align: right;
+  margin-top: 50rpx;
+  font-size: 30rpx;
+  color: #666;
+}
+
+.charge text {
+  font-size: 60rpx;
+  color: #333;
+}
+
+.payment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60rpx auto;
+  font-size: 30rpx;
+  color: #666;
+}
+
+.payment .final-payment {
+  font-size: 60rpx;
+}
+
+.pay-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 350rpx 0 0 0;
+  font-size: 30rpx;
+  color: #fff;
+  background: #3891f8;
+  border-radius: 4rpx;
+  padding: 20rpx;
+}

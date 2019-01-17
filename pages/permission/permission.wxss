@@ -1,0 +1,11 @@
+.logo_image_location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    margin-bottom: 35px;
+}
+
+.weui-btn-area {
+    margin: 1.17647059em 15px 0.3em;
+}

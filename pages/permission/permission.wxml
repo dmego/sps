@@ -1,0 +1,18 @@
+<view>
+    <view class="page__bd">
+        <view class="logo_image_location" style="display: flex;flex-direction: column;">
+            <image mode="aspectFill" src="../../images/system/logo.png" style="width: 70px; height: 70px;"></image>
+            <text style="font-size: 16px; margin-top: 5px;">{{title}}</text>
+        </view>
+        <view style="display: flex;flex-direction: column;margin-left: 30px;margin-bottom: 30px;">
+            <text style="font-size: 14px;">使用该小程序，请确认授权以下权限</text>
+            <text style="font-size: 12px;color: #818181;">2.获得你的公开信息（昵称、头像等）</text>
+            <text style="font-size: 12px;color: #818181;">1.获取您的地理位置信息</text>
+        </view>
+        <view class="weui-btn-area">
+            <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" plain="true" style="color: #818181;border: 1px solid #818181;font-size: 14px;">
+                确认登录
+            </button>
+        </view>
+    </view>
+</view>

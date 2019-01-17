@@ -1,0 +1,15 @@
+<!--template/toasts/toasts.wxml-->
+<template name="actCode">
+  <view class="code-succeed" wx:if="{{codeHehe}}" style="opacity:1;pointer-events:auto;">
+    <view class="code-succeed-toast">
+      <image src="/images/system/close1@2x.png" class="code-close" bindtap="closeCode"></image>
+      <view class="code-club-content">
+        <view class="text-space">点击下方二维码</view>
+        <view class="text-space">查看图片长按并保存至本地</view>
+      </view>
+      <view>
+        <image mode="widthFix" class="code-message-img" src="{{imageurl}}" bindtap='seeCodeBig'></image>
+      </view>
+    </view>
+  </view>
+</template>

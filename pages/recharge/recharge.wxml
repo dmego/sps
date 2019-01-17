@@ -1,0 +1,15 @@
+<view class="parent">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+        <view class="v-vertical">
+            <view class="gli"></view>
+            <text class="t-desc">充值金额</text>
+            <view class="v-h">
+                <text>¥</text>
+                <input maxlength="4" type="digit" value="50" name="recharge"></input>
+            </view>
+            <view class="gli-2"></view>
+            <text class="t-desc">当前余额(元):{{showCash}}</text>
+        </view>
+        <button formType="submit" class="deBtn bt">确认</button>
+    </form>
+</view>

@@ -1,0 +1,35 @@
+<view class="map-box">
+  <map show-location bindcontroltap="controltap" bindmarkertap="markertap" bindregionchange="regionchange" circles="{{circles}}" id="myMap" latitude="{{latitude}}" longitude="{{longitude}}" markers="{{markers}}" polyline="{{polyline}}" scale="{{scale}}">
+    <!-- 地图上下阴影 -->
+    <cover-image class='map-shadow-top' src='../../images/system/map-shadow-top.png' />
+    <cover-image class='map-shadow-btm' src='../../images/system/map-shadow-btm.png' />
+    <cover-view class='top-tips'>
+      <cover-image class='top-icon' src='../../images/system/mess3.png' />
+      <cover-view class='top-text'>石家庄今日停车享受八折优惠</cover-view>
+    </cover-view>
+    <!-- 中心坐标 -->
+    <cover-image class='map-icon_point' src='../../images/system/car.png' />
+    <!-- 控件 -->
+    <cover-image hidden='{{!hasMarker}}' class='map-icon map-icon_msg' src='../../images/system/detail.png' bindtap='toDetail' />
+    <cover-image class='map-icon map-icon_user' src='../../images/system/map_use.png' bindtap='toUser' />
+    <cover-image class='map-icon map-icon_reset' src='../../images/icon_bt_location.png' bindtap='toReset' />
+  </map>
+</view>
+<view class='main-btn' hidden='{{!hasMarker}}'>
+  <image bindtap="btnNavacation" src="../../images/parking-navigation.png" class='main-img'></image>
+  <view class='main-view'>
+    <view class='main-text'>
+      <text class='park-name' decode='true'>{{bottomObj.name}}&nbsp;&nbsp;</text>
+      <text class='juli-tips' decode='true'>{{bottomObj.address}}</text>
+    </view>
+    <view class="main-text">
+      <text class='juli-text' decode='true'>{{bottomObj.distance}}&nbsp;</text>
+      <text class='juli-tips' decode='true'>米距离中心点&nbsp;&nbsp;&nbsp;&nbsp;</text>
+      <text class='juli-text' decode='true'>{{bottomObj.price}}&nbsp;</text>
+      <text class='juli-tips' decode='true'>元每小时</text>
+    </view>
+  </view>
+</view>
+<view class='main-btn' hidden='{{hasMarker}}'>
+  <view class='no-view'>附近无共享车位!</view>
+</view>

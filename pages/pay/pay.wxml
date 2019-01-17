@@ -1,0 +1,30 @@
+<view container>
+  <view class='price'>
+    <view class='price-info'>
+      <text class='price-left'>本次停车时长总计</text>
+      <text class='price-right'>{{parktime}}</text>
+    </view>
+    <view class='price-info'>
+      <text class='price-left'>本次停车费用总计</text>
+      <text class='price-right'>{{parkcost}}元</text>
+    </view>
+    <view class='coupon-info'>
+      <text>当前优惠抵扣</text>
+      <text>-{{coupon}}元</text>
+    </view>
+  </view>
+  <view class='pay-ways'>
+    <view class='pay-text'>
+      <image class='pay-icon' src='/images/system/charge.png'></image>
+      钱包支付
+    </view>
+  </view>
+  <view class='payment'>
+    <text>
+      实际支付<text class='final-payment'>{{price}}</text>元
+    </text>
+  </view>
+  <view class='pay-btn' bindtap='toPay'>
+    <text> 确定支付<text>{{price}}</text>元</text>
+  </view>
+</view>

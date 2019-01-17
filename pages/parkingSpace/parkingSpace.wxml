@@ -1,0 +1,69 @@
+<import src="../weight/toast/showToast.wxml"></import>
+<template is="showToast" data="{{showToast:showToast}}"></template>
+<view stytle=" overflow-x: hidden; overflow-y: auto; ">
+  <view class="v-v" hidden="{{hasPark}}">
+    <view class="v-v">
+      <view class="v-car">
+        <image class="img-car" src="../../images/system/car_list_empty.png"></image>
+      </view>
+      <text class="t-carInfo">您暂时没有车位</text>
+      <text class="t-desc1">快去添加吧！</text>
+    </view>
+    <button bindtap="btnAddPark" class="bt-addCar">添加车位</button>
+  </view>
+  <view class="parent" hidden="{{!hasPark}}">
+    <view class="line"></view>
+    <block wx:for="{{bills}}" wx:for-index="idx" wx:key="item">
+      <view bindtap="toPage" bindtouchmove="moveLis" class="item-tree" data-index="{{idx}}">
+        <view class="item-v">
+          <view class="item-h">
+            <view class="v-icon">
+              <image class="im-park" src="{{item.parkpic.url}}"></image>
+            </view>
+            <view class="item-v-center">
+              <view class="im-h">
+                <text class="t-time">车位名称：</text>
+                <text class="t-time">{{item.ownname}}</text>
+              </view>
+              <view class="im-h">
+                <text class="t-time">车位号：</text>
+                <text class="t-num">{{item.parkNumber}}</text>
+              </view>
+              <text class="t-time">{{item.address}}</text>
+            </view>
+            <view class="item-v-btn">
+              <text class="t-mon">{{item.status}}</text>
+            </view>
+          </view>
+        </view>
+        <view class="im-menu" hidden="{{idx!=menuId}}">
+          <view bindtap="btnBuild" class="item-v-menu">
+            <image class="img-menu" src="../../images/edit.png"></image>
+            <text class="t-menu">编辑</text>
+          </view>
+          <view bindtap="btnDetail" class="item-v-menu">
+            <image class="img-menu" src="../../images/system/detail2.png"></image>
+            <text class="t-menu">详情</text>
+          </view>
+          <view bindtap="btnDel" class="item-v-menu">
+            <image class="img-menu" src="../../images/remove.png"></image>
+            <text class="t-menu">删除</text>
+          </view>
+        </view>
+      </view>
+      <view class="line"></view>
+    </block>
+    <view class="loadingmore">
+      <view wx:if="{{!isEmpty}}">
+        <button class="more-button" formType="submit" size="mini" bindtap="onLoadMore">
+          加载更多...
+        </button>
+      </view>
+      <view class="no-more" wx:if="{{isEmpty}}">---无更多内容---</view>
+    </view>
+    <view bindtap="btnAddPark" class="v-fBtn">
+      <image src="../../images/icon_add.png"></image>
+    </view>
+  </view>
+  <view bindtap="hideModal" catchtouchmove="preventTouchMove" class="modal-mask" wx:if="{{showModal}}"></view>
+</view>

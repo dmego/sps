@@ -1,0 +1,11 @@
+<view stytle=" overflow-x: hidden; overflow-y: auto; ">
+    <view class="v-v">
+        <text class="t-carInfo">添加车牌</text>
+        <text class="t-desc">智慧式停车场"看"到你的车牌</text>
+        <text class="t-desc">入场停车能自动识别您的停车信息</text>
+        <view class="v-car">
+            <image class="img-car" src="../../images/image_car_add.png"></image>
+        </view>
+        <button bindtap="btnAddCar" class="bt-addCar">添加车辆</button>
+    </view>
+</view>

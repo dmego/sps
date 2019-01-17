@@ -1,0 +1,131 @@
+.item-column {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    margin-top: 6px;
+    text-align: center;
+}
+.item-h {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+    align-items: center;
+}
+.im-h {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.item-v {
+    display: flex;
+    flex-direction: column;
+}
+.im-type {
+    width: 46rpx;
+    height: 46rpx;
+    margin-right: 10px;
+}
+.t-time {
+    font-size: 24rpx;
+    color: #999;
+}
+.t-mon {
+    font-size: 48rpx;
+    color: #fb7a47;
+}
+.t-monO {
+    font-size: 48rpx;
+    color: #388ef3;
+}
+.t-typeO {
+    font-size: 36rpx;
+    color: #388ef3;
+}
+.t-type {
+    font-size: 36rpx;
+    color: #fb7a47;
+}
+.tv-time {
+    color: #aaa;
+    font-size: 12px;
+    text-align: right;
+    margin-right: 10px;
+    width: 100%;
+    margin-top: 5px;
+}
+.tv-nym {
+    color: #aaa;
+    font-size: 14px;
+}
+.text {
+    color: #000;
+    font-family: "微软雅黑";
+    font-size: 36rpx;
+    padding-left: 1rpx;
+    width: 35%;
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.tv-num {
+    color: gray;
+    font-family: "微软雅黑";
+    font-size: 34rpx;
+    padding-left: 1rpx;
+    flex: 1;
+    text-align: left;
+}
+.line {
+    height: 18rpx;
+    width: 100%;
+    background-color: #eee;
+}
+.message_list {
+    display: flex;
+    background-color: #f2f2f2;
+    margin-bottom: 15px;
+}
+.item-tree {
+    margin-top: 7rpx;
+    margin-bottom: 7px;
+    background-color: white;
+}
+.groumName {
+    position: absolute;
+    font-weight: bold;
+    color: #000;
+    font-family: "微软雅黑";
+    font-size: 24rpx;
+    margin-top: 13rpx;
+    padding-left: 30rpx;
+}
+.line-narrow {
+    height: 1px;
+    width: 100%;
+    background-color: #e0e1e2;
+}
+.loading {
+    padding: 10rpx;
+    text-align: center;
+    color: #a6a6a6;
+    font-size: 12px;
+}
+.loading:before {
+    display: inline-block;
+    margin-right: 5rpx;
+    vertical-align: middle;
+    content: '';
+    width: 40rpx;
+    height: 40rpx;
+    background-size: contain;
+    animation: rotate 1s linear infinite;
+}
+.loading.complete:before {
+    display: none;
+}
+.on {
+    background-color: gray;
+}

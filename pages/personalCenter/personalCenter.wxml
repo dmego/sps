@@ -1,0 +1,47 @@
+<import src="../weight/toast/showToast.wxml"></import>
+<template is="showToast" data="{{showToast:showToast}}"></template>
+<view class="body">
+    <view class="user-nav">
+        <view class="userinfo">
+            <image backgroundSize="cover" class="userinfo-avatar" src="{{personInfo.avatarUrl}}"></image>
+            <text class="userinfo-nickname">{{personInfo.nickName}}</text>
+        </view>
+    </view>
+    <view class="use-nav-info">
+        <view bindtap="btnAmount" class="use-nav-right">
+            <view>
+                <text class="balance-text">{{user.balance}}</text>
+                <text class="text-price">元</text>
+            </view>
+            <view class="mark">
+                <text class="text-info">余额</text>
+            </view>
+        </view>
+        <view class="grow"></view>
+        <view bindtap="btnCountProfit" class="use-nav-right">
+            <view>
+                <text class="earnings-text">{{user.income}}</text>
+                <text class="text-price">元</text>
+            </view>
+            <view class="mark">
+                <text class="text-info">累计收益</text>
+            </view>
+        </view>
+    </view>
+    <view class="gli"></view>
+    <view class="user">
+        <view class="user_menu_list">
+            <block wx:for="{{userMenuList}}" wx:for-index="idx" wx:key="idx">
+                <view bindtap="toPage" class="item-tree" data-index="{{idx}}">
+                    <image class="tree_image_left" src="{{item.icon}}"></image>
+                    <text class="groumName">{{item.groupName}}</text>
+                    <image class="tree_image_right" src="{{item.rightImage}}"></image>
+                </view>
+                <view class="gli" wx:if="{{idx==0}}"></view>
+                <view class="gli" wx:if="{{idx==2}}"></view>
+                <view class="gli-2" wx:if="{{idx!=2}}"></view>
+            </block>
+        </view>
+    </view>
+    <view class="gli2"></view>
+</view>

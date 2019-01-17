@@ -1,0 +1,33 @@
+{
+  "pages": [
+   
+    "pages/permission/permission",
+    "pages/index/index",
+    "pages/personalCenter/personalCenter",
+    "pages/bill/bill",
+    "pages/logs/logs",
+    "pages/recharge/recharge",
+    "pages/banlance/banlance",
+    "pages/banlance/detail",
+    "pages/banlance/posta",
+    "pages/unlock/unlock",
+    "pages/pay/pay",
+    "pages/charge/charge",
+    "pages/parkingSpace/parkingSpace",
+    "pages/parkingSpace/addParkingSpace",
+    "pages/parkingSpace/upParkingSpace",
+    "pages/parkingSpaceUser/addCar",
+    "pages/parkingSpaceUser/car",
+    "pages/parkingSpaceUser/updataCar",
+    "pages/parkingSpaceDetail/parkingSpaceDetail",
+    "pages/about/about"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3891f8",
+    "navigationBarTitleText": "SPS共享停车位",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f4f4f4"
+  },
+  "debug": true
+}

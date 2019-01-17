@@ -1,0 +1,18 @@
+<view class="body">
+    <view class="about-body">
+        <view class="about-nav">
+            <view class="nav-info">
+                <image class="about-img" src="../../images/system/logo.png"></image>
+            </view>
+        </view>
+        <view class="about_menu_list">
+            <block wx:for="{{aboutMenuList}}" wx:for-index="idx" wx:key="idx">
+                <view bindtap="toPage" class="item-tree" data-index="{{idx}}">
+                    <text class="groumName">{{item.groupName}}</text>
+                    <text class="aboutText">{{item.aboutText}}</text>
+                </view>
+                <view class="gli-2" wx:if="{{idx!=2}}"></view>
+            </block>
+        </view>
+    </view>
+</view>

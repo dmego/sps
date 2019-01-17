@@ -1,0 +1,31 @@
+<import src="../weight/toast/showToast.wxml"></import>
+<template is="showToast" data="{{showToast:showToast}}"></template>
+<view stytle=" overflow-x: hidden; overflow-y: auto; ">
+    <view class="line"></view>
+    <block wx:for="{{bills}}" wx:for-index="idx" wx:key="item">
+        <view bindtap="toPage" class="item-tree" data-index="{{idx}}">
+            <view class="item-h">
+                <view class="item-v">
+                    <view class="im-h">
+                        <image class="im-type" src="{{item.typeId==0?'../../images/system/income.png':'../../images/system/outcome.png'}}"></image>
+                        <text class="{{item.typeId==0?'t-type':'t-typeO'}}">
+                            {{item.typeId==0?'收益':'支出'}}
+                        </text>
+                    </view>
+                    <text class="t-time">订单号：{{item.objectId}}</text>
+                    <text class="t-time">创建时间：{{item.createdAt}}</text>
+                </view>
+                <text class="{{item.typeId==0?'t-mon':'t-monO'}}">¥ {{item.billAmount}}</text>
+            </view>
+        </view>
+        <view class="line"></view>
+    </block>
+    <view class="loadingmore">
+        <view wx:if="{{!isEmpty}}">
+            <button class="more-button" formType="submit" size="mini" bindtap="onLoadMore">
+                加载更多...
+            </button>
+        </view>
+        <view class="no-more" wx:if="{{isEmpty}}">---无更多内容---</view>
+    </view>
+</view>

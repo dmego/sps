@@ -1,0 +1,22 @@
+<view class="parent">
+    <view class="v-top">
+        <text class="t-monInfo">当前余额(元)</text>
+        <text class="t-mon">{{showCash}}</text>
+        <text class="t-monAlert">只可用于支付停车费</text>
+    </view>
+    <view class="v-bottom">
+        <view class="gli"></view>
+        <view bindtap="btnRecharge" class="item-tree">
+            <image class="tree_image_left" src="../../images/icon_pay.png"></image>
+            <text class="groumName">充值</text>
+            <image class="tree_image_right" src="../../images/tip.png"></image>
+        </view>
+        <view class="gli"></view>
+        <view bindtap="btnDetail" class="item-tree">
+            <image class="tree_image_left" src="../../images/icon_parkRom.png"></image>
+            <text class="groumName">明细</text>
+            <image class="tree_image_right" src="../../images/tip.png"></image>
+        </view>
+        <view class="gli"></view>
+    </view>
+</view>

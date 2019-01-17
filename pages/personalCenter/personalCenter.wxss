@@ -1,0 +1,166 @@
+.user {
+    width: 100%;
+    height: 100%;
+}
+
+.user-nav {
+    background-color: #3891f8;
+    width: 100%;
+    height: 256rpx;
+}
+
+.use-nav-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 8rpx;
+    margin-bottom: 13rpx;
+    margin-top: 13rpx;
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
+}
+
+.user-nav-right {
+    display: table-column;
+    margin-top: 10rpx;
+}
+
+.balance-text {
+    font-size: 36rpx;
+    color: #fc5357;
+}
+
+.earnings-text {
+    font-size: 36rpx;
+    color: #fb7a47;
+}
+
+.carnum-text {
+    font-size: 36rpx;
+    color: #3891f8;
+}
+
+.text-price {
+    font-size: 20rpx;
+    color: #999;
+    margin-left: 10rpx;
+}
+
+.text-info {
+    color: #333;
+    font-family: "PingFang-SC-Regular";
+    line-height: 10rpx;
+    font-size: 24rpx;
+    padding-left: 1rpx;
+}
+
+.tree_image_right {
+    position: absolute;
+    right: 15rpx;
+    width: 50rpx;
+    height: 50rpx;
+    margin-right: 15rpx;
+    margin-top: 3rpx;
+}
+
+.groumName {
+    position: absolute;
+    color: #000;
+    font-family: "PingFang-SC-Regular";
+    font-size: 30rpx;
+    margin-top: 10rpx;
+    padding-left: 30rpx;
+}
+
+.item-tree {
+    margin: 20rpx 30rpx 10rpx 30rpx;
+}
+
+.line-narrow {
+    height: 2rpx;
+    width: 100%;
+    background-color: #f4f4f4;
+}
+
+.image {
+    width: 88rpx;
+    height: 88rpx;
+}
+
+.tree_image_left {
+    width: 36rpx;
+    height: 36rpx;
+    padding-top: 14rpx;
+}
+
+.user-list {
+    width: 100%;
+    height: 40rpx;
+    background-color: #f4f4f4;
+}
+
+.widgets_info {
+    margin-top: 40rpx;
+    padding: 10rpx 0 10rpx 0;
+    height: 80rpx;
+    overflow: hidden;
+    line-height: 50rpx;
+    background-color: #fff;
+}
+
+.widgets_info-img {
+    width: 50rpx;
+    height: 50rpx;
+    margin-left: 30rpx;
+    margin-right: 30rpx;
+    float: left;
+}
+
+.widgets_info-name {
+    display: block;
+    height: 60rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 30rpx;
+}
+
+.userinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.userinfo-avatar {
+    width: 128rpx;
+    height: 128rpx;
+    margin: 20rpx;
+    border-radius: 50%;
+}
+
+.userinfo-nickname {
+    color: #fff;
+}
+
+.grow {
+    height: 64rpx;
+    border-left: 1rpx solid #ddd;
+    margin-top: 13rpx;
+}
+
+.kefu {
+    position: absolute;
+    font-family: "PingFang-SC-Regular";
+    font-size: 30rpx;
+    color: #3891f8;
+    margin-left: 47%;
+    line-height: 56rpx;
+    margin-top: 2rpx;
+}
+
+.gli2 {
+    width: 100%;
+    height: 20rpx;
+    background: #f4f4f4;
+}

@@ -1,0 +1,60 @@
+.parent {
+    display: flex;
+    flex-direction: column;
+}
+.v-top {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: #3891f8;
+    padding: 15px;
+}
+.v-bottom {
+    display: flex;
+    flex-direction: column;
+}
+.t-monInfo {
+    margin-top: 20px;
+    font-family: PingFang-SC-Regular;
+    font-size: 30rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    color: #fff;
+}
+.t-mon {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-family: PingFang-SC-Regular;
+    font-size: 88rpx;
+    color: #fff;
+}
+.t-monAlert {
+    margin-bottom: 40px;
+    font-family: PingFang-SC-Regular;
+    font-size: 24rpx;
+    color: #fff;
+}
+.item-tree {
+    margin: 20rpx 30rpx 10rpx 30rpx;
+}
+.tree_image_right {
+    position: absolute;
+    right: 15rpx;
+    width: 50rpx;
+    height: 50rpx;
+    margin-right: 15rpx;
+    margin-top: 3rpx;
+}
+.tree_image_left {
+    width: 36rpx;
+    height: 36rpx;
+    padding-top: 14rpx;
+}
+.groumName {
+    position: absolute;
+    color: #000;
+    font-family: "PingFang-SC-Regular";
+    font-size: 30rpx;
+    margin-top: 10rpx;
+    padding-left: 30rpx;
+}

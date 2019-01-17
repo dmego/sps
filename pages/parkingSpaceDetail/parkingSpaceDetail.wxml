@@ -1,0 +1,78 @@
+<import src="../weight/toast/showToast.wxml"></import>
+<import src="../template/toasts/toasts.wxml" />
+<!-- pages/detail/detail.wxml -->
+<scroll-view scroll-y="true" class="all_scr" style="padding-bottom:112rpx;">
+  <image wx:if="{{park.parkpic.url}}" class="header_imgss" src="{{park.parkpic.url}}" mode="aspectFill" bindtap='seeParkBig'></image>
+  <view class="detail_con">
+    <view class="detail_title paddingLR">
+      <text>{{park.ownname}}</text>
+    </view>
+    <view class="des_txt detail_msg">
+      <view>
+        <text>业主姓名: {{park.publisher.nickname}}</text>
+      </view>
+      <view>
+        <text style="margin-right:12px;"></text>
+        <text style="margin-right:12px;">联系电话: {{park.ownphone}}</text>
+      </view>
+    </view>
+    <view class="detail_input" style="padding-bottom:15rpx;">
+      <text class="des_txt detail_txt">详细地址</text>
+      <view class="detail_row_right actAddress">
+        <view class="txt-overflow">{{park.address}}</view>
+      </view>
+      <view class="detail_lineh"></view>
+      <view style="display:flex;justify-content:flex-end">
+        <view class="detail_linev"></view>
+        <view bindtap="btnNavacation" class="detail_map">
+          <image src="/images/system/map5.png" style="width:16px;height:16px"></image>
+        </view>
+      </view>
+    </view>
+    <view class="detail_input">
+      <text class="des_txt detail_txt">起租时间</text>
+      <view class="detail_row_right">
+        <text>{{park.timeStart}}</text>
+      </view>
+      <view class="detail_lineh"></view>
+    </view>
+    <view class="detail_input">
+      <text class="des_txt detail_txt">停租时间</text>
+      <view class="detail_row_right">
+        <text>{{park.timeEnd}}</text>
+      </view>
+      <view class="detail_lineh"></view>
+    </view>
+    <view class="detail_input">
+      <text class="des_txt detail_txt">租用价格</text>
+      <view class="detail_row_right">
+        <text>{{park.price}} 元每小时</text>
+      </view>
+      <view class="detail_lineh"></view>
+    </view>
+    <view class="detail_input">
+      <text class="des_txt detail_txt">车位状态</text>
+      <view class="detail_row_right">
+        <text class='statustag_{{parkstatus}}'>{{park.status}}</text>
+      </view>
+      <view class="detail_lineh"></view>
+    </view>
+    <view class="detail_input">
+      <text class="des_txt detail_txt">车位备注</text>
+      <view class="detail_row_right" style='white-space:pre-line'>
+        <text>{{park.remark}}</text>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+<template is="actCode" data="{{imageurl,codeHehe}}" />
+<view class="bottom">
+  <view class="bottom-beta-box">
+    <button class="textarea1_case_sign" bindtap='toScan' wx:if='{{!isMe}}'>
+      <view>扫码租用</view>
+    </button>
+    <button class="textarea1_case_sign" bindtap='toGenCode' wx:if='{{isMe}}'>
+      <view>生成二维码</view>
+    </button>
+  </view>
+</view>

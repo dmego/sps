@@ -1,0 +1,25 @@
+<import src="../weight/toast/showToast.wxml"></import>
+<template is="showToast" data="{{showToast:showToast}}"></template>
+<view stytle=" overflow-x: hidden; overflow-y: auto; ">
+    <view class="v-v" hidden="{{hasCar}}">
+        <view class="v-car">
+            <image class="img-car" src="../../images/system/car_list_empty.png"></image>
+        </view>
+        <text class="t-carInfo">您暂时没有车辆</text>
+        <text class="t-desc">快去添加吧！</text>
+        <button bindtap="btnAddCar" class="bt-addCar">添加车辆</button>
+    </view>
+    <view class="parent" hidden="{{!hasCar}}">
+        <view class="line"></view>
+        <view bindlongtap="toPage" class="item-tree" data-index="{{idx}}" wx:for="{{cars}}" wx:for-index="idx" wx:key="item">
+            <view class="im-h">
+                <image class="im-num" src="{{item.status==1?'../../images/circle.png':'../../images/icon_circle_de.png'}}"></image>
+                <text class="t-num">{{item.carNumber}}</text>
+            </view>
+            <view class="gli-4"></view>
+        </view>
+        <view bindtap="btnAddCar" class="v-fBtn">
+            <image src="../../images/icon_add.png"></image>
+        </view>
+    </view>
+</view>

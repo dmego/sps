@@ -1,0 +1,16 @@
+<view class="parent">
+    <view class="v-vertical">
+        <view class="gli"></view>
+        <text class="t-desc">提现金额</text>
+        <view class="v-h">
+            <text>¥</text>
+            <input maxlength="4" type="digit" value="50"></input>
+        </view>
+        <view class="gli-2"></view>
+        <view class="v-h-bt">
+            <text class="t-desc">当前余额:500.00</text>
+            <text class="btn-posta">全部提现</text>
+        </view>
+    </view>
+    <button bindtap="btnSubmit" class="deBtn bt">确认</button>
+</view>

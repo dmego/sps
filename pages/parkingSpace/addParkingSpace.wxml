@@ -1,0 +1,110 @@
+<view class="add-page">
+  <form bindsubmit="submitForm">
+    <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{TopTips}}</view>
+    <view class="mod-a">
+      <view class="mod t-name">
+        <text class="key">车位名称</text>
+        <input name="ownname" class="input" maxlength="100" placeholder="请输入车位名称" value="{{ownname}}" />
+        <image class="arrow-r" src="/images/arrow-r-0.png"></image>
+      </view>
+    </view>
+    <view class="mod-a mt20">
+      <view class="mod t-name">
+        <text class="key">业主电话</text>
+        <input name="ownphone" class="input" maxlength="11" type="digit" placeholder="请输入业主电话" value="{{ownphone}}" />
+        <image class="arrow-r" src="/images/arrow-r-0.png"></image>
+      </view>
+    </view>
+    <view style='padding: 0 20rpx;'>
+      <view class="mod t-address" bindtap="chooseLocation">
+        <text class="key">详细地址</text>
+        <text name="address" class="value" bindtap="addressChange" value="{{address}}">
+          {{address}}
+        </text>
+        <image class="arrow-r" src="/images/arrow-r-0.png"></image>
+      </view>
+    </view>
+    <view class="mod-a mt20">
+      <view class="mod t-name">
+        <text class="key">车位号</text>
+        <input name="parkNumber" class="input" maxlength="100" placeholder="请输入车位号" value="{{parkNumber}}" />
+        <image class="arrow-r" src="/images/arrow-r-0.png"></image>
+      </view>
+    </view>
+    <view class="mod-a mt20">
+      <view class="mod t-sign-time">
+        <text class="key">起租时间</text>
+        <picker mode="date" value="{{startdate}}" start="{{startdate}}" end="2117-12-31" bindchange="bindStartDateChange">
+          <view class="value" name="startdate">{{startdate}}</view>
+        </picker>
+        <picker mode="time" value="{{starttime}}" start="00:00" end="24:00" bindchange="bindStartTimeChange">
+          <view class="value" name="starttime">
+            {{starttime}}
+            <image class="arrow-r" src="/images/arrow-r-0.png"></image>
+          </view>
+        </picker>
+      </view>
+      <view class="mod t-sign-time">
+        <text class="key">停租时间</text>
+        <picker mode="date" value="{{enddate}}" start="{{enddate}}" end="2117-12-31" bindchange="bindEndDateChange">
+          <view class="value" name="enddate">{{enddate}}</view>
+        </picker>
+        <picker mode="time" value="{{endtime}}" start="00:00" end="24:00" bindchange="bindEndTimeChange">
+          <view class="value" name="endtime">
+            {{endtime}}
+            <image class="arrow-r" src="/images/arrow-r-0.png"></image>
+          </view>
+        </picker>
+      </view>
+      <view class="mod t-name">
+        <text class="key">出租价格</text>
+        <input name="price" class="input" maxlength="2" placeholder="请输入出租价格(/小时)" value="{{price}}" />
+        <image class="arrow-r" src="/images/arrow-r-0.png"></image>
+      </view>
+    </view>
+    <view class="mod-a mt20">
+      <view class="mod t-name">
+        <text class="key">车位状态</text>
+        <picker name="status" bindchange="binStatusChange" value="{{statusIndex}}" range="{{statusArr}}">
+          <view class="input">{{statusArr[statusIndex]}}</view>
+        </picker>
+        <image class="arrow-r" src="/images/arrow-r-0.png"></image>
+      </view>
+    </view>
+    <view class="mod-a mt20">
+      <view class="mod-big my-nick">
+        <textarea name="remark" class="weui-textarea" placeholder="请输入详细车位位置，租用提醒等备注内容" value="{{remark}}" style="height: 7em" bindinput="bindTextAreaChange" maxlength="{{noteMaxLen}}" />
+        <view class="chnumber">{{noteNowLen}}/{{noteMaxLen}}</view>
+      </view>
+    </view>
+    <view class="add_pic" bindtap="uploadPic" wx-if="{{!isSrc}}">
+      <view>请提供车位正面照片</view>
+    </view>
+    <view wx:if="{{isSrc}}" class="image_box">
+      <view class="picPre">
+        <image src="{{src}}" mode="aspectFit"></image>
+        <view bindtap="clearPic"></view>
+      </view>
+    </view>
+    <view class="mod-a mt20"></view>
+    <view class="mod-a mt20">
+      <checkbox-group bindchange="bindAgreeChange">
+        <label class="weui-agree" for="weuiAgree">
+          <view class="weui-agree__text">
+            <checkbox class="weui-agree__checkbox" id="weuiAgree" value="agree" checked="{{isAgree}}" />
+            <view class="weui-agree__checkbox-icon">
+              <icon class="weui-agree__checkbox-icon-check" type="success_no_circle" size="9" wx:if="{{isAgree}}"></icon>
+            </view>
+            阅读并同意
+            <view class="weui-agree__link">《发布须知》</view>
+          </view>
+        </label>
+      </checkbox-group>
+      <view class="submit-btn">
+        <button class='button' loading="{{isLoading}}" hover-start-time="200" disabled="{{isdisabled}}" formType="submit">
+          发布车位
+        </button>
+      </view>
+    </view>
+  </form>
+</view>

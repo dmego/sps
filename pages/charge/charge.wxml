@@ -1,0 +1,19 @@
+<view container>
+  <view class='price'>
+    <view class='price-info'>
+      <text class='price-left'>每小时</text>
+      <text class='price-right'>{{price}}元</text>
+    </view>
+    <view class='time-info'>
+      <text>不到1小时按1小时计算</text>
+      <text></text>
+    </view>
+  </view>
+  <view class='charge'>
+    <view>
+      当前费用约
+      <text>{{cost}}</text>
+      元
+    </view>
+  </view>
+</view>

@@ -1,0 +1,27 @@
+<import src="../weight/toast/showToast.wxml"></import>
+<template is="showToast" data="{{showToast:showToast}}"></template>
+<view stytle=" overflow-x: hidden; overflow-y: auto; ">
+  <view class="line"></view>
+  <block wx:for="{{bills}}" class="item-tree" wx:for-index="idx" wx:key="objectId">
+    <view class="item-h">
+      <view class="item-h-de">
+        <view class="item-v">
+          <text class="t-type">{{item.type}}</text>
+          <text class="t-time">{{item.createdAt}}</text>
+        </view>
+      </view>
+      <text wx:if="{{item.typeId==0}}" class="t-mon0">+ {{item.value}}元</text>
+      <text wx:if="{{item.typeId==1}}" class="t-mon1">+ {{item.value}}元</text>
+      <text wx:if="{{item.typeId==2}}" class="t-mon2">- {{item.value}}元</text>
+    </view>
+    <view class="gli"></view>
+  </block>
+  <view class="loadingmore">
+    <view wx:if="{{!isEmpty}}">
+      <button class="more-button" formType="submit" size="mini" bindtap="onLoadMore">
+        加载更多...
+      </button>
+    </view>
+    <view class="no-more" wx:if="{{isEmpty}}">---无更多内容---</view>
+  </view>
+</view>
