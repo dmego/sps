@@ -7,7 +7,7 @@
 <p align="center">
     <a href="https://github.com/dmego"><img src="https://img.shields.io/badge/Author-Dmego-brightgreen.svg"/></a>
     <a href="https://github.com/dmego/sps/releases"><img src="https://img.shields.io/github/release-pre/dmego/sps.svg"/></a>
-    <a href="https://img.shields.io/github/languages/code-size/dmego/sps.svg"><img src="https://github.com/dmego/sps"/></a>
+    <a href="https://github.com/dmego/sps"><img src="https://img.shields.io/github/languages/code-size/dmego/sps.svg"/></a>
     <a href="https://github.com/dmego/sps/blob/master/LICENSE"><img src="https://img.shields.io/github/license/dmego/sps.svg"/></a>
 </p>
 
@@ -30,7 +30,7 @@ git clone https://github.com/dmego/sps.git
 
 >在你的微信小程序后台配置你的服务器域名,更为具体的配置请查看 [bmob 文档](https://docs.bmob.cn/data/wechatApp/a_faststart/doc/index.html)
 
->本项目基于 Bmob后端云开发，并且已经上架源码交易，可以免费购买并直接部署。
+>本项目基于 Bmob后端云开发，并且已经上架[源码交易](https://www.bmob.cn/shop/index)，可以免费购买并直接部署。
 
 
 ## 许可证
